@@ -12,7 +12,9 @@
     <img src="assets/hamburger3.png" alt="menu icon">
   </div>
   <div class="brand">
-    <img src="assets/tree_logo4.png" alt="Logo" class="logo">
+    <a href="about.html">
+      <img src="assets/tree_logo4.png" alt="Logo" class="logo">
+    </a>
   </div>
   <nav class="desktop-nav">
     <a href="about.html" class="nav-btn active">About</a>
@@ -79,24 +81,24 @@
   <p>© 2025 Irinej Slapal — contact: <a href="mailto:slapalirinej3@gmail.com">slapalirinej3@gmail.com</a></p>
 </footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const menuToggle = document.getElementById("menuToggle");
-  const sidebar = document.querySelector(".sidebar");
-  const overlay = document.getElementById('sidebarOverlay');
-  console.log("overlay is:", overlay); this
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const menuToggle = document.getElementById("menuToggle");
+      const sidebar = document.querySelector(".sidebar");
+  
+      // Toggle menu when hamburger is clicked
+      menuToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("active");
+      });
 
-
-  menuToggle.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-    overlay.classList.toggle("active");
-  });
-
-  overlay.addEventListener("click", () => {
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-  });
-});
-</script>
+      // Close menu when clicking the green background (not on a link)
+      sidebar.addEventListener("click", (e) => {
+        // Only close if clicking the sidebar itself, not a link
+        if (e.target === sidebar) {
+          sidebar.classList.remove("active");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
