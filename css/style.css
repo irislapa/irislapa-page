@@ -45,8 +45,9 @@ header {
   background: var(--accent);
   box-shadow: 0 2px 4px var(--shadow-dark);
   border-bottom: none;
-  height: 100px;
-  padding: 0 40px;
+  height: 120px !important;
+  min-height: 120px;
+  padding: 0 20px;
 }
 
 header .brand {
@@ -218,22 +219,32 @@ a.external:hover {
   text-align: justify;
 }
 
-.about-article img {
+.about-article img.float-left {
   max-width: 28%;
   height: auto;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
-  margin: 1rem 2rem 0.8rem;
+  float: left;
+  margin: 1rem 1rem 0.8rem 0; /* top, right, bottom, left */
   object-fit: cover;
   border: 2px solid #fff !important;
   border-radius: 0 !important;
 }
 
-.float-left {
-  float: left;
+/* Right-floating image */
+.about-article img.float-right {
+  max-width: 28%;
+  height: auto;
+  float: right;
+  margin: 1rem 0 0.8rem 1rem; /* top, right, bottom, left */
+  object-fit: cover;
+  border: 2px solid #fff !important;
+  border-radius: 0 !important;
 }
 
-.float-right {
-  float: right;
+/* Clear floats after the paragraph if needed */
+.about-article::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* BLOG SECTION */
@@ -402,6 +413,10 @@ footer a:hover {
     display: flex;
   }
   
+  header {
+  height: 120px !important;
+  }
+
   header .logo {
     height: 90px;
   }
