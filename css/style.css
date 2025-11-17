@@ -9,7 +9,7 @@
   --shadow-dark: rgba(0, 0, 0, 0.6);
   --shadow-light: #363636;
   --soft-red: #cc5050a9; 
-  --bright-tag-green: #42f159; 
+  --bright-tag-green: #00ff00; 
   --radius: 10px;
 }
 
@@ -172,14 +172,35 @@ main {
 
 /* LINKS */
 a.external {
-  color: #b8ffc1 ; /* base link color */
-  text-decoration: none; /* removes underline */
+  color: #fff; /* base link color */
+  text-decoration: underline; /* removes underline */
   transition: color 0.2s;
+}
+
+a.external_icon {
+  color: #fff; /* base link color */
+  transition: color 0.2s;
+}
+
+a.lang-toggle {
+  color: #fff;
+  text-decoration: none;
 }
 
 a.external:hover {
   color: var(--bright-tag-green);
   text-decoration: underline; /* optional */
+}
+
+a.external_icon:hover {
+  color: var(--bright-tag-green);
+  transform: translateY(-1px);
+}
+
+a.lang-toggle:hover {
+  color: var(--bright-tag-green);
+  transform: translateY(-1px);
+  text-decoration: none;
 }
 
 /* Tags/Skills */
@@ -201,7 +222,7 @@ a.external:hover {
 }
 
 .tag:hover {
-  background: #42f159;
+  background: var(--bright-tag-green);
   transform: translateY(-1px);
 }
 
@@ -284,10 +305,6 @@ a.external:hover {
   font-size: 2.2rem;
   margin-top: 2rem;
   margin-bottom: 3rem;
-}
-
-.cv h1:hover {
-  color: var(--bright-tag-green);
 }
 
 .cv {
@@ -390,7 +407,7 @@ a.external:hover {
 
 .video-container {
   position: relative;
-  width: 40%; /* half the width */
+  width: 100%; /* half the width */
   aspect-ratio: 16 / 9;
   border: 2px solid #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
