@@ -348,13 +348,13 @@ a.lang-toggle:hover {
 
 .cv-left {
   text-align: right;
-  padding-right: 30px;
+  padding-right: 0px;
 }
 
 .cv-right {
   text-align: left;
   max-width: 550px;
-  padding-left: 30px;
+  padding-left: 0px;
 }
 
 .cv-footer {
