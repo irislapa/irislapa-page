@@ -4,7 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Résumé</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cv-style.css">
+
+
+  <style>
+    .cv-logo-cell {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+    }
+    .logo-link {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background-color: #fff;
+      -webkit-mask: url("assets/tree_logo4.png") no-repeat center / contain;
+              mask: url("assets/tree_logo4.png") no-repeat center / contain;
+      transition: background-color 0.3s ease;
+    }
+    .logo-link:hover {
+      background-color: var(--bright-tag-green);
+    }
+  </style>
 </head>
 <body>
 
@@ -12,6 +33,7 @@
 
 <div class="cv-title-row">
     <h1>Curriculum Vitae <a class="lang-toggle" href="cv-cs-en.html">(sl)</a></h1>
+    <a class="cv-download" href="assets/Irinej_Slapal_CV.pdf" download>prenesi pdf</a>
 </div>
   <section class="cv-section">
 
@@ -22,16 +44,16 @@
 
     <div class="cv-item">
       <div class="cv-left">
-          <h3>Univerza</h3>
-          <span class="cv-date">oct 2020 – sep 2024</span>
+          <h3>Študij</h3>
+          <span class="cv-date">okt 2020 – sep 2024</span>
       </div>
       <div class="cv-right">
         
-        <p>Po srednji šoli sem bil sprejet na <a href="https://www.fri.uni-lj.si/sl" class="external"><strong>Fakulteto za računalništvo in informatiko, Univerze v Ljubljani</strong></a>,
-          kjer sem študij zaključil septembra 2024. Trenutno sem absolvent in zaključujem diplomsko nalogo.</p>
-        <p>Spodaj so našteti do nekateri od šolskih projektov, ki sem jih dokumentiral:</p>
+        <p>Po srednji šoli sem se vpisal na <a href="https://www.fri.uni-lj.si/sl" class="external"><strong>Fakulteto za računalništvo in informatiko, Univerze v Ljubljani</strong></a>,
+          kjer sem visoko šolski študij zaključil septembra 2024. Trenutno sem absolvent in zaključujem diplomsko nalogo.</p>
+        <p>Spodaj so našteti do nekateri od študijskih projektov, ki sem jih dokumentiral:</p>
         <ul>
-          <li><a href="https://github.com/irislapa/fri-vss.git" class="external">Zbirka nekaterih nalog</a>, ki so se mi zdele zanimive in cool.</li>
+          <li><a href="https://github.com/irislapa/fri-vss.git" class="external">Zbirka nekaterih nalog</a>, ki so se mi zdele zanimive.</li>
           <div class="tags">
             <span class="tag"><strong>Python</strong></span>
             <span class="tag"><strong>C</strong></span>
@@ -58,9 +80,16 @@
           </div>
           </li>
         </ul>
-          <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/OU4xcbiVv8w?si=z2TmS62Z6PNBT75P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>   
+        <!-- Video container for the YouTube video -->
+
+        
+        <ul>
+          <li><a href="https://github.com/irislapa/stm32h750-audio" class="external">Demo vzorčenja audio signala na stm32h750</a>, ki je nastal v sklopu obštudijske dejavnosti Računalništvo v praksi.</li>
+          <div class="tags">
+            <span class="tag"><strong>C</strong></span>
+            <span class="tag"><strong>CMSIS DSP knjiznjica</strong></span>
+          </div>
+        </ul>
       </div>
     </div> 
 
@@ -78,7 +107,7 @@
     <div class="cv-item">
       <div class="cv-left">
           <h3>Internship</h3>
-          <span class="cv-date"> may 2024– jul 2025</span>
+          <span class="cv-date"> maj 2024– jul 2025</span>
       </div>
       <div class="cv-right">
         <p>V zadjem letu študija sem imel priložnost opraviti <strong>prakso</strong> v podjetju <strong><a href="https://www.tasking.com" class="external">Tasking d.o.o.</a></strong> kot <strong>programer za vgrajene sisteme</strong>.</p>
@@ -117,6 +146,18 @@
       </div>
     </div>
 
+
+    <div class="cv-item">
+      <div class="cv-left cv-logo-cell">
+        <a href="about.html" class="cv-logo">
+          <img src="assets/tree_logo4.png" alt="Logo">
+        </a>
+      </div>
+      <div class="cv-right">
+        <p>Več o meni si lahko preberete na <a href="about.html" class="external">tej povezavi</a>!</p>
+      </div> 
+    </div>
+
   </section>
 
 </main>
@@ -124,40 +165,8 @@
 
 <footer class="cv-footer">
 
-  <div class="brand-cv" style="display: flex; justify-content: center;">
-    <a href="about.html" class="logo-link">
-      <img src="assets/tree_logo4.png" alt="Logo" class="logo">
-      <style>
-        img {
-            width: 50px; /* adjust as needed */
-            margin-top: 20px;
-            margin-bottom: 30px;
-            justify-content: center;
-            align-items: center;
-            align-self: center;
-            filter: brightness(0.7) invert(0.9); /* make it white-ish on dark bg */
-            transition: filter 0.3s ease;
-        }
-        .logo-link {
-          display: inline-block;
-          width: 50px;
-          height: 50px;
-          -webkit-mask: url("assets/tree_logo4.png") no-repeat center / contain;
-          mask: url("assets/tree_logo4.png") no-repeat center / contain;
-          background-color: white; /* default color */
-          transition: background-color 0.3s ease;
-        }
-        .logo-link:hover {
-          background-color: var(--bright-tag-green); /* hover color */
-        }
-        .logo-link img{
-          display: none; /* hide the <img> since we’re using it as a mask */
-        }
-      </style>
-    </a>
-  </div>
+  
   <div class="footer-content">
-    <p>I also invite you to my <a href="about.html" class="external">site</a>!</p>
     <div class="footer-links">
       <a href="mailto:slapalirinej3@gmail.com" class="external_icon" aria-label="Email">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
