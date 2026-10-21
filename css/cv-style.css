@@ -320,9 +320,9 @@ a.lang-toggle:hover {
 
 .video-container {
   position: relative;
-  width: 100%; /* half the width */
+  width: 80%; /* half the width */
   aspect-ratio: 16 / 9;
-  border: 2px solid #000000;
+  border: 2px solid #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   margin: 20px 0;
 }
